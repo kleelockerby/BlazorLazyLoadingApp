@@ -1,0 +1,23 @@
+﻿@page "/componentrefexample"
+
+<h3>ComponentRefExample</h3>
+
+<Component1 @ref="Component1Ref" Title="Component 1 Title" />
+<div style="margin: 15px 0">@MessageFromComponent</div>
+
+<button @onclick="ShowMessage">Show Message</button>
+
+@code {
+
+	private ComponentBase Component1Ref;
+    private string MessageFromComponent;
+
+    public void ShowMessage()
+    {
+        if (Component1Ref != null)
+        {
+            var c1 = (Component1)Component1Ref;
+            MessageFromComponent = c1.GetMessage();
+        }
+    }
+}

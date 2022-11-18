@@ -1,9 +1,23 @@
 ﻿<div class="my-component">
+    @if (titleText != null)
+    {
+        <div>@titleText</div>
+    }
     This Blazor component is defined in the <strong>LazyComponent</strong> package.
 </div>
 
 @code
 {
+    [Parameter] public string Title { get; set; }
+    private string titleText = string.Empty;
+
+    protected override void OnInitialized()
+    {
+        if (!string.IsNullOrEmpty(Title))
+        {
+            this.titleText = this.Title;
+        }
+    }
 
     public string GetMessage()
     {

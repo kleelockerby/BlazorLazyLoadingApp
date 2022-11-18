@@ -36,6 +36,12 @@
                 IEnumerable<Assembly> assemblies = await assemblyLoader.LoadAssembliesAsync(assemblyNames!);
                 lazyLoadedAssemblies.AddRange(assemblies);
             }
+            if (args.Path == "componentrefexample")
+            {
+                IEnumerable<string>? assemblyNames = await Http.GetFromJsonAsync<IEnumerable<string>>("data/lazyAssembliesComponentRef.json");
+                IEnumerable<Assembly> assemblies = await assemblyLoader.LoadAssembliesAsync(assemblyNames!);
+                lazyLoadedAssemblies.AddRange(assemblies);
+            }
         }
         catch (Exception ex)
         {
