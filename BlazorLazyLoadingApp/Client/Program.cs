@@ -11,5 +11,6 @@ Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("NjYxMjU2QDMyMzAy
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 builder.Services.AddScoped<WeatherForecastLazyService>();
 builder.Services.AddSyncfusionBlazor();
+builder.Services.AddScoped<LoadAssembliesService>();
 
 await builder.Build().RunAsync();
