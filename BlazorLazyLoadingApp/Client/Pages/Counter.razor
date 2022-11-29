@@ -8,11 +8,13 @@
 
 <SfButton CssClass="e-info" @onclick="IncrementCount">Click Me</SfButton>
 
+<h3 style="margin: 10px 0;">Syncfusion Blazor Calendar</h3>
 
+<SfCalendar TValue="DateTime"></SfCalendar>
 
 @code {
     private int currentCount = 0;
-    private string iconCss = "e-btn-sb-icons e-play-icon";
+    //private string iconCss = "e-btn-sb-icons e-play-icon";
 
     private void IncrementCount()
     {

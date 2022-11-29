@@ -1,0 +1,15 @@
+{
+  "AssembliesCounter":
+  [
+    "Syncfusion.Blazor.Buttons.dll",
+    "Syncfusion.Blazor.Calendars.dll"
+  ],
+  "AssembliesComponentRef":
+  [
+    "BlazorLazyLoadingApp.Components.dll"
+  ],
+  "AssembliesWeather":
+  [
+    "BlazorLazyLoadingApp.ServiceProxies.dll"
+  ]
+}
